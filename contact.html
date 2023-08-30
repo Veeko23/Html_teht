@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  href="style.css" />
+    <title>Contact</title>
+   
+</head>
+<body >
+    <header>
+        <nav class="navbar">
+            <div class="social-media">
+                <span class="logo-name">Veeti</span>
+                <a href="https://github.com/Veeko23" class="social-icon"><img src="images/github-icon.png" alt="Github"></a>
+                <a href="#" class="social-icon discord-icon">
+                    <img src="images/discord-icon.png" alt="Discord">
+                    <span class="popup">___vespa___</span>
+                </a>
+            </div>
+
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">gallery</a></li>
+                </ul>
+            </div>
+            <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
+            <label for="dark-mode-toggle" class="toggle-button"></label>
+        </nav>
+    </header>
+
+    <div class="content fade-in">
+    <div class="content">
+        
+        <h1 class="ContactUs">Contact Me</h1>
+        
+            <div class="ContactUs-Box">
+                <h1>t1kove02@students.oamk.fi</h1>
+  
+            </div>
+            
+
+        <div class="Send-Message">
+        <form  action="mailto:t1kove02@students.oamk.fi" method="post" enctype="text/plain">
+            <label for="sender-email">Your Email:</label>
+            <input type="email" id="sender-email" name="sender-email" required><br><br>
+    
+            <label for="email-subject">Subject:</label>
+            <input type="text" id="email-subject" name="email-subject" required><br><br>
+    
+            <label for="email-message">Message:</label><br>
+            <textarea id="email-message" name="email-message" rows="4" required></textarea><br><br>
+    
+            <input type="submit" value="Send Email">
+        </form>
+        </div>  
+      </div>
+    
+    
+
+
+    </div>
+</body>
+<footer>
+    <<p>&copy; 2023 Veeti Kokkonen. All Rights Reserved.</p>
+</footer>
+</html>
