@@ -10,31 +10,40 @@
 </head>
 <div class="content fade-in">
 <body>
-
-    <header>
-        <nav class="navbar">
-            <div class="social-media">
-                <span class="logo-name">Veeti</span>
-                <a href="https://github.com/Veeko23" class="social-icon"><img src="images/github-icon.png" alt="Github"></a>
-                <a href="#" class="social-icon discord-icon">
-                    <img src="images/discord-icon.png" alt="Discord">
-                    <span class="popup">___vespa___</span>
-                </a>
+<header>
+        
+    <nav class="navbar" id="navbar">
+            
+        <div class="dropdown">
+            <img onclick="DDmenuClickHandler()" class="menu-icon" src="images/menu-icon.png" alt="MenuIcon">
+            <div id="myDropdown" class="dropdown-content">
+                <div class="dd-navbar-links">
+                    <ul>
+                        <input type="text" placeholder="Search.." name="search">
+                        <li><a class="active"  href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="gallery.html">gallery</a></li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="navbar-links">
+        </div>
+              <span class="logo-name">Veeti</span>
+            <div class="navbar-links" >  
                 <ul>
                     <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="gallery.html">gallery</a></li>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
                 </ul>
                 
             </div>
             <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
             <label for="dark-mode-toggle" class="toggle-button"></label>
-
         </nav>
     </header>
 <section class="home flex-center" id="home">
@@ -55,6 +64,9 @@
     <img src="Images/jerma.png" alt="Me">
 </div>
  </div>
+ <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
     
 </section>
@@ -64,6 +76,8 @@
     <footer>
         <p>&copy; 2023 Veeti Kokkonen. All Rights Reserved.</p>
     </footer>
+
+
 
 </body>
 </div>

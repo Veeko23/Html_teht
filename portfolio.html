@@ -4,36 +4,50 @@
     <script src="script.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet"  href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Portfolio</title>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="social-media">
-                <span class="logo-name">Veeti</span>
-                <a href="https://github.com/Veeko23" class="social-icon"><img src="images/github-icon.png" alt="Github"></a>
-                <a href="#" class="social-icon discord-icon">
-                    <img src="images/discord-icon.png" alt="Discord">
-                    <span class="popup">___vespa___</span>
-                </a>
+        
+        <nav class="navbar" id="navbar">
+                
+            <div class="dropdown">
+                <img onclick="DDmenuClickHandler()" class="menu-icon" src="images/menu-icon.png" alt="MenuIcon">
+                <div id="myDropdown" class="dropdown-content">
+                    <div class="dd-navbar-links">
+                        <ul>
+                            <input type="text" placeholder="Search.." name="search">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a class="active" href="portfolio.html">Portfolio</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="gallery.html">gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <div class="navbar-links">
-                <ul>
-                    <li><a  href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a class="active" href="portfolio.html">Portfolio</a></li>
-                    <li><a  href="contact.html">Contact</a></li>
-                    <li><a href="gallery.html">gallery</a></li>
-                </ul>
-            </div>
-            <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
-            <label for="dark-mode-toggle" class="toggle-button"></label>
-        </nav>
-    </header>
+                  <span class="logo-name">Veeti</span>
+                <div class="navbar-links" >  
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a class="active" href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="gallery.html">gallery</a></li>
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </ul>
+                    
+                </div>
+                <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
+                <label for="dark-mode-toggle" class="toggle-button"></label>
+    
+            </nav>
+        </header>
 
     <div class="content fade-in">
-
+        <a href="" class="btn"> Download My CV <i class="fas fa-arrow-circle-right"></i></a>
     <div class="content">
         <img src="images/Codings.jpeg" alt="Codings">
     </div>

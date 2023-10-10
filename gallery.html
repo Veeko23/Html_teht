@@ -1,59 +1,80 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <script src="script.js"></script>
     <meta charset="UTF-8">
     <title>Gallery</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
    
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="social-media">
-                <span class="logo-name">Veeti</span>
-                <a href="https://github.com/Veeko23" class="social-icon"><img src="images/github-icon.png" alt="Github"></a>
-                <a href="#" class="social-icon discord-icon">
-                    <img src="images/discord-icon.png" alt="Discord">
-                    <span class="popup">___vespa___</span>
-                </a>
+        
+        <nav class="navbar" id="navbar">
+                
+            <div class="dropdown">
+                <img onclick="DDmenuClickHandler()" class="menu-icon" src="images/menu-icon.png" alt="MenuIcon">
+                <div id="myDropdown" class="dropdown-content">
+                    <div class="dd-navbar-links">
+                        <ul>
+                            <input type="text" placeholder="Search.." name="search">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a class="active"  href="gallery.html">gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <div class="navbar-links">
-                <ul>
-                    <li><a  href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a class="active" href="gallery.html">gallery</a></li>
-                </ul>
-            </div>
-            <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
-            <label for="dark-mode-toggle" class="toggle-button"></label>
-        </nav>
-    </header>
-
+                  <span class="logo-name">Veeti</span>
+                <div class="navbar-links" >  
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a class="active" href="gallery.html">gallery</a></li>
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </ul>
+                    
+                </div>
+                <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
+                <label for="dark-mode-toggle" class="toggle-button"></label>
+            </nav>
+        </header>
     <div class="content fade-in">
-    <div class="content">
-        <h1 class="section-title"color: green; font-size: 90px; font-family: tahoma; text-align: center;"></h1>
-    <div class="row">
-        <div class="column">
-            <img class="scroll-fade" src="images/JermaO.png" alt="jermaO" style="width:100%">
-        </div>
-        <div class="column">
-            <img class="scroll-fade" src="images/jerma.png" alt="jerma" style="width:100%">
-        </div>
-        <div class="column">
-            <img class="scroll-fade" src="Images/Jermoid.jpg" alt="jermoid" style="width:100%">
+        <div class="content">
+            <div class="row">
+                <div class="column">
+                    <img class="scroll-fade myImg" src="images/JermaO.png" alt="jermaO" style="width:100%">
+                </div>
+                <div class="column">
+                    <img class="scroll-fade myImg" src="images/jerma.png" alt="jerma" style="width:100%">
+                </div>
+                <div class="column">
+                    <img class="scroll-fade myImg" src="Images/Jermoid.jpg" alt="jermoid" style="width:100%">
+                </div>
+                <div  class="column"> 
+                    <img class="scroll-fade myImg" id="dogImage" src="" alt="Random Dog image" style="width:100%">
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
-</body>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
 
     <footer>
         <p>&copy; 2023 Veeti Kokkonen. All Rights Reserved.</p>
     </footer>
+
     
     </html>

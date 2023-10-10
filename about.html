@@ -4,58 +4,71 @@
     
     <script src="script.js"></script>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>About</title>
 
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="social-media">
-                <span class="logo-name">Veeti</span>
-                <a href="https://github.com/Veeko23" class="social-icon"><img src="images/github-icon.png" alt="Github"></a>
-                <a href="#" class="social-icon discord-icon">
-                    <img src="images/discord-icon.png" alt="Discord">
-                    <span class="popup">___vespa___</span>
-                </a>
+   <header>
+        
+    <nav class="navbar" id="navbar">
+            
+        <div class="dropdown">
+            <img onclick="DDmenuClickHandler()" class="menu-icon" src="images/menu-icon.png" alt="MenuIcon">
+            <div id="myDropdown" class="dropdown-content">
+                <div class="dd-navbar-links">
+                    <ul>
+                        <input type="text" placeholder="Search.." name="search">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="active" href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="gallery.html">gallery</a></li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="navbar-links">
+        </div>
+              <a href="index.html" class="logo-name">Veeti</a>
+            <div class="navbar-links" >  
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a class="active" href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="gallery.html">gallery</a></li>
-                </ul>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </ul>      
             </div>
             <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
             <label for="dark-mode-toggle" class="toggle-button"></label>
+
         </nav>
     </header>
 
     <div class="content fade-in">
-    <div class="content-about">
-      
-        <div class="aboutMe-Box">
-            <div class="aboutMe-content">
-                <h1 class="aboutMe">About Me</h1>
-                <h2 class="AboutMeDesc">I'm a student in OAMK, and I'm studying to become a Bachelor of Engineering.</h2>
-                <h1 class="aboutMe">Hobbies</h1>
-                <ul class="hobbies-list">
-                    
+    
+        <section  class="about flex-center" id="about">
+            <div class="about-container">
+                <div class="info">
+                <h1 >About Me</h1>
+                <h3 >I'm a student in OAMK, and I'm studying to become a Bachelor of Engineering. 
+                </h3>
+                <h1 >Hobbies</h1>
+                <ul>
                     <li>Cycling</li>
                     <li>Gaming</li>
                     <li>3D-modeling</li>
                 </ul>
             </div>
+        <div class="about-img">
+            <img src="images/jerma.png" alt="Me">
         </div>
-        <div class="image-container">
-            <img src="images/jerma.png" alt="Minä">
         </div>
     </div>
-</div>
+</section>
 </body>
 
 <footer>
