@@ -1,3 +1,21 @@
+function alertFunc(){
+  try{
+   
+   if(document.getElementById('email')){
+    throw new Error('No email')
+   }
+  }
+   catch(error){
+    console.error('Error in email')
+   }
+  
+  alert("Message send!")
+}
+
+
+
+
+
 async function getDog(){
   try{
     const response = await fetch('https://dog.ceo/api/breeds/image/random');
@@ -37,7 +55,7 @@ function DDmenuClickHandler() {
 }
 
   window.onclick = function(event) {
-    if (!event.target.matches('.menu-icon')) {
+    if (!event.target.matches('.fa-solid')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
       var i;
       for (i = 0; i < dropdowns.length; i++) {

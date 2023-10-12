@@ -14,7 +14,7 @@
         <nav class="navbar" id="navbar">
                 
             <div class="dropdown">
-                <img onclick="DDmenuClickHandler()" class="menu-icon" src="images/menu-icon.png" alt="MenuIcon">
+             <i alt="MenuIcon" onclick="DDmenuClickHandler()" class="fa-solid fa-bars"></i>
                 <div id="myDropdown" class="dropdown-content">
                     <div class="dd-navbar-links">
                         <ul>
@@ -41,10 +41,13 @@
                     </ul>
                     
                 </div>
-                <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
-                <label for="dark-mode-toggle" class="toggle-button"></label>
-    
+               <ul>
+                <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox" > 
+                <label for="dark-mode-toggle" class="fa-solid fa-moon"> </label>
+                
+            </ul>
             </nav>
+            
         </header>
 
     <div class="content fade-in">
@@ -63,7 +66,7 @@
         </div>
 
         <div class="Send-Message">
-            <form action="send_email.php" method="post">
+            <form method="post">
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" required>
                 
@@ -73,7 +76,7 @@
                 <label for="message">Message:</label>
                 <textarea name="message" id="message" required></textarea>
                 
-                <input type="submit" value="Send Email">
+                <input type="submit" onClick="alertFunc()" value="Send Email">
             </form>
         </div>  
       </div>

@@ -9,6 +9,7 @@
         padding: 50px;
         max-width: 150%;
         overflow: auto;
+        transition:0.3s ease;
     }
     .dropdown-content a {
         max-height: fit-content;
@@ -22,6 +23,7 @@
     }
       
       .navbar-links{
+        transition: all 0.6s ease-in-out;
         display: none;
       }
       .contact{
@@ -122,6 +124,7 @@ html{
 }
 
 .toggle-button::before {
+    
     content: '';
     width: 20px;
     height: 20px;
@@ -173,7 +176,7 @@ a{
     transition:  0.3s ease;
 }
 ul li a {
-    color: var(--first-color);
+    color: var(--dark-first-color);
     transition:  0.3s ease;
 }
 
@@ -802,50 +805,59 @@ main {
     color: #ffffff8f;
   }
 
-  .menu-icon {
+  .fa-solid{
     align-items: left; 
     display: flex;
-    max-width: 45px;
-    max-height: 45px;
+ 
+    border-radius: 2px;
+    
   }
   
-  .menu-icon:hover {
+  .fa-solid:hover {
     transition: all 0.1s ease;
     cursor: pointer;
-    padding: 2px;
-    border-radius: 3px;
+    padding: 1px;
+    
+
   }
 
   .dropdown {
     position: relative;
-
+    transition: right 0.5s ease;
   }
   
   .dropdown-content {
-    left: 0;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+    display: block !important;
+    transform: translateX(-500px);
     display: none;
     max-height: 0;
     position: fixed;
     background-color: var(--body-background-color);
     overflow: hidden;
-    transition: all 0.6s ease-in-out;
     min-height: calc(110vh);
     margin-top: 17px;
   }
 
   .dropdown-content.show{
+    transform: scale(1);
+
+    left: 0;
     display: block;
     max-height: fit-content;
 
   }
   
   .dropdown-content a {
+    transition: right 0.6s ease-in-out;
     text-decoration: none;
     display: block;
     padding-top: 10px;
   }
   .dropdown-content a.active {
-    transition:  0.3s ease;
+    transition: right 0.6s ease-in-out;
     background-color: #ffffff1f;
     padding: 10px;
     border-radius: 5px;

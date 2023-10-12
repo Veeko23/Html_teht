@@ -13,14 +13,14 @@
 <header>
         
     <nav class="navbar" id="navbar">
-            
+                
         <div class="dropdown">
-            <img onclick="DDmenuClickHandler()" class="menu-icon" src="images/menu-icon.png" alt="MenuIcon">
+         <i alt="MenuIcon" onclick="DDmenuClickHandler()" class="fa-solid fa-bars"></i>
             <div id="myDropdown" class="dropdown-content">
                 <div class="dd-navbar-links">
                     <ul>
                         <input type="text" placeholder="Search.." name="search">
-                        <li><a class="active"  href="index.html">Home</a></li>
+                        <li><a class="active" href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -30,9 +30,9 @@
             </div>
         </div>
               <span class="logo-name">Veeti</span>
-            <div class="navbar-links" >  
+            <div class="navbar-links">  
                 <ul>
-                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a class="active"  href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -42,8 +42,11 @@
                 </ul>
                 
             </div>
-            <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
-            <label for="dark-mode-toggle" class="toggle-button"></label>
+           <ul>
+            <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox" > 
+            <label for="dark-mode-toggle" class="fa-solid fa-moon"> </label>
+            
+        </ul>
         </nav>
     </header>
 <section class="home flex-center" id="home">
