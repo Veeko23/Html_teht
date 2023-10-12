@@ -4,6 +4,37 @@
         <div class="loader"></div>
         <p >Welcome</p>
     </div>
+    
+    <script>
+        var loadingScreenShown = localStorage.getItem('loadingScreenShown');
+    
+        if (!loadingScreenShown) {
+            var loadingScreen = document.getElementById('loading-screen');
+            var welcomeMessage = document.createElement('p');
+            welcomeMessage.id = 'welcome-message';
+            welcomeMessage.textContent = 'Welcome';
+            document.body.appendChild(welcomeMessage);
+    
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    loadingScreen.style.opacity = '0';
+                    welcomeMessage.style.opacity = '0';
+                    setTimeout(function () {
+                        loadingScreen.style.display = 'none';
+                        welcomeMessage.style.display = 'none';
+    
+                        localStorage.setItem('loadingScreenShown', 'true');
+                    }, 1000);
+                }, 1000);
+            });
+        } else {
+            var loadingScreen = document.getElementById('loading-screen');
+            var welcomeMessage = document.getElementById('welcome-message');
+            loadingScreen.style.display = 'none';
+            welcomeMessage.style.display = 'none';
+        }
+    </script>
+    
 <head>
     <script src="script.js"></script>
     <meta charset="UTF-8">
@@ -13,25 +44,7 @@
 </head>
 <div class="content fade-in">
 <body>
-    <script>
-        // JavaScript code to display the "Welcome to my web page" message
-        var loadingScreen = document.getElementById('loading-screen');
-        var welcomeMessage = document.createElement('p');
-        welcomeMessage.id = 'welcome-message';
-        welcomeMessage.textContent = 'Welcome';
-        document.body.appendChild(welcomeMessage);
 
-        window.addEventListener('load', function () {
-            setTimeout(function() {
-                loadingScreen.style.opacity = '0';
-                welcomeMessage.style.opacity = '0';
-                setTimeout(function() {
-                    loadingScreen.style.display = 'none';
-                    welcomeMessage.style.display = 'none';
-                }, 1000); // Change 1000 to the desired duration in milliseconds for fading
-            }, 2000); // Change 2000 to the desired duration in milliseconds to display the message
-        });
-    </script>
 
 
 <header>
