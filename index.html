@@ -37,10 +37,12 @@
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="gallery.html">gallery</a></li>
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search.." name="search" id="search-box" onkeydown="searchOnEnter(event)">
+                    <button type="submit" onclick="search()"><i class="fa fa-search"></i></button>
+                    <div class="search-results">
+                        <ul id="results-list"></ul>
+                    </div>
                 </ul>
-                
             </div>
            <ul>
             <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox" > 
@@ -52,9 +54,8 @@
 <section class="home flex-center" id="home">
 <div class="home-container">
     <div class="media-icons">
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-istagram"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
 </div>
 
     <div class="info">

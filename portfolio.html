@@ -16,14 +16,16 @@
              <i alt="MenuIcon" onclick="DDmenuClickHandler()" class="fa-solid fa-bars"></i>
                 <div id="myDropdown" class="dropdown-content">
                     <div class="dd-navbar-links">
+                        <div>
                         <ul>
-                            <input type="text" placeholder="Search.." name="search">
+                            
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a class="active"  href="portfolio.html">Portfolio</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="gallery.html">gallery</a></li>
                         </ul>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -35,8 +37,11 @@
                         <li><a  class="active" href="portfolio.html">Portfolio</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="gallery.html">gallery</a></li>
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" placeholder="Search.." name="search" id="search-box" onkeydown="searchOnEnter(event)">
+                        <button type="submit" onclick="search()"><i class="fa fa-search"></i></button>
+                        <div class="search-results">
+                            <ul id="results-list"></ul>
+                        </div>
                     </ul>
                     
                 </div>
@@ -49,12 +54,96 @@
         </header>
 
     <div class="content fade-in">
-        <a href="" class="btn"> Download My CV <i class="fas fa-arrow-circle-right"></i></a>
-    <div class="content">
-        <img src="images/Codings.jpeg" alt="Codings">
-    </div>
-</div>
-
+        
+        <section class="about flex-center" id="contact">
+            <div class="portfolio-icons">
+                <a href="https://www.artstation.com/"><i class="fa-brands fa-artstation"></i></a>
+                <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="portfolio-container">
+                <h1>Skills</h1>
+                <ul class="skills-list">
+                    <h1>Coding skills</h1>
+                    <li>
+                        <span class="skill">
+                            <span class="skill-name">C++</span>
+                            <span class="skill-tier">average</span>
+                        </span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="skill">
+                            <span class="skill-name">Java</span>
+                            <span class="skill-tier">Good</span>
+                        </span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="skill">
+                            <span class="skill-name">C</span>
+                            <span class="skill-tier">Okay</span>
+                        </span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 40%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="skill">
+                            <span class="skill-name">MySql</span>
+                            <span class="skill-tier">Okay</span>
+                        </span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 45%;"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="skills-list">
+                <h1>Other skills</h1>
+                <li>
+                    <span class="skill">
+                        <span class="skill-name">Blender</span>
+                        <span class="skill-tier">Impressive</span>
+                    </span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;"></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="skill">
+                        <span class="skill-name">Photoshop</span>
+                        <span class="skill-tier">Good</span>
+                    </span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="skill">
+                        <span class="skill-name">Substance3D</span>
+                        <span class="skill-tier">Good</span>
+                    </span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="skill">
+                        <span class="skill-name">Github</span>
+                        <span class="skill-tier">Good</span>
+                    </span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </li>
+            </ul>
+            </div>
+            <a download="Other/CV.txt" href="Other/CV.txt" class="btn"> Download My CV <i class="fa fa-download"></i></a>
+        </section>
+        
 </body>
 
 <footer>

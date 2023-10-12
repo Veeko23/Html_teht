@@ -1,18 +1,65 @@
-function alertFunc(){
-  try{
-   
-   if(document.getElementById('email')){
-    throw new Error('No email')
-   }
-  }
-   catch(error){
-    console.error('Error in email')
-   }
+const data = [
+  { title: "Home Page", url: "index.html" },
+  { title: "About Page", url: "about.html" },
+  { title: "Portfolio Page", url: "portfolio.html" },
+  { title: "Contact Page", url: "contact.html" },
+  { title: "CV", url: "portfolio.html" },
+  { title: "github", url: "https://github.com/" },
   
-  alert("Message send!")
+ //Items to search for......
+];
+function searchOnEnter(event) {
+  if (event.key === 'Enter') {
+      search();
+  }
 }
 
+function search() {
+  const searchQuery = document.getElementById("search-box").value.toLowerCase();
+  const resultsList = document.getElementById("results-list");
+  resultsList.innerHTML = '';
 
+  const words = searchQuery.split(/\s+/);
+
+  if (words.length === 0) {
+      return; // No query, no results
+  }
+
+  const matchingResults = data.filter(result => {
+      const title = result.title.toLowerCase();
+      return words.some(word => new RegExp(`\\b${word}\\b`).test(title));
+  });
+
+  if (matchingResults.length === 0) {
+      resultsList.innerHTML = '<li>No results found.</li>';
+  } else {
+      matchingResults.forEach(result => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = result.url;
+          a.textContent = result.title;
+          li.appendChild(a);
+          resultsList.appendChild(li);
+      });
+  }
+
+  const searchResults = document.querySelector(".search-results");
+  searchResults.style.display = "block";
+}
+
+function alertFunc() {
+  var email = document.getElementById("email").value;
+  var subject = document.getElementById("subject").value;
+  var message = document.getElementById("message").value;
+
+
+  if (email.trim() === "" || message.trim() === "") {
+      alert("Please fill in all required fields (Email and Message).");
+      return false;
+  }
+  alert("Message sent successfully!")
+  return true;
+}
 
 
 
@@ -54,6 +101,7 @@ function DDmenuClickHandler() {
     dropdown.classList.toggle("show");
 }
 
+/*
   window.onclick = function(event) {
     if (!event.target.matches('.fa-solid')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -66,7 +114,7 @@ function DDmenuClickHandler() {
       }
     }
   }
-
+*/
 
 document.addEventListener("DOMContentLoaded", function() {
 
