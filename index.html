@@ -5,38 +5,9 @@
         <p >Welcome</p>
     </div>
     
-    <script>
-        var loadingScreenShown = localStorage.getItem('loadingScreenShown');
-    
-        if (!loadingScreenShown) {
-            var loadingScreen = document.getElementById('loading-screen');
-            var welcomeMessage = document.createElement('p');
-            welcomeMessage.id = 'welcome-message';
-            welcomeMessage.textContent = 'Welcome';
-            document.body.appendChild(welcomeMessage);
-    
-            window.addEventListener('load', function () {
-                setTimeout(function () {
-                    loadingScreen.style.opacity = '0';
-                    welcomeMessage.style.opacity = '0';
-                    setTimeout(function () {
-                        loadingScreen.style.display = 'none';
-                        welcomeMessage.style.display = 'none';
-    
-                        localStorage.setItem('loadingScreenShown', 'true');
-                    }, 1000);
-                }, 1000);
-            });
-        } else {
-            var loadingScreen = document.getElementById('loading-screen');
-            var welcomeMessage = document.getElementById('welcome-message');
-            loadingScreen.style.display = 'none';
-            welcomeMessage.style.display = 'none';
-        }
-    </script>
-    
 <head>
-    <script src="script.js"></script>
+    <script src="Assets/Scripts/script.js"></script>
+    <script src="Assets/Scripts/Welcome.js"></script>
     <meta charset="UTF-8">
     <title>Home Page</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
@@ -103,7 +74,7 @@
         <a href="contact.html" class="btn"> Contact Me <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 <div class="home-img">
-    <img src="Images/jerma.png" alt="Me">
+    <img src="Assets/Images/jerma.png" alt="Me">
 </div>
  </div>
  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

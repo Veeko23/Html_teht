@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="script.js"></script>
+    <script src="Assets/Scripts/script.js"></script>
+    <script src="Assets/Scripts/Contact-Script.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet"  href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Contact</title>
    
 </head>
-<div class="content fade-in">
-<body >
+
+<body>
+
     <header>
         
         <nav class="navbar" id="navbar">
@@ -53,20 +55,20 @@
             
         </header>
 
-
+ <div class="content fade-in">
     <section class="contact flex-center" id="contact">
         <div class="info">
-
-        <h1>Contact Me</h1>
- 
+            <h1>Contact Me</h1>
             <div class="ContactUs-Box">
+                <h1>
+                    <i style="padding-right: 20px;" class="fa-solid fa-envelope" onclick="copyTextToClipboard('t1kove02@students.oamk.fi')"></i>t1kove02@students.oamk.fi<br>
+                    <i style="padding-right: 10px;" class="fa-solid fa-phone" onclick="copyTextToClipboard('+358 123456789')" id="elementToCopy2"></i> +358 123456789
+                </h1>
                 
-                <h1><i style="padding-right: 20px;" class="fa-solid fa-envelope"></i>t1kove02@students.oamk.fi<br><i style="padding-right: 10px;" class="fa-solid fa-phone"></i> +358 123456789</h1>
-                
-                
-  
             </div>
+            <div id="alertBox">Try copying the text with buttons (phone and envelope)</div>
         </div>
+   
 
         <div class="Send-Message">
             <form method="post">
@@ -82,15 +84,13 @@
                 <input type="submit" onClick="alertFunc()" value="Send Email">
             </form>
         </div>  
-      </div>
-
     
-
-</section>
-</body>
-<footer>
-    <p>&copy; 2023 Veeti Kokkonen. All Rights Reserved.</p>
-</footer>
-
+    </section>
 </div>
+
+    <footer>
+        <p>&copy; 2023 Veeti Kokkonen. All Rights Reserved.</p>
+    </footer>
+</body>
+
 </html>

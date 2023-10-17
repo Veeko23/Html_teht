@@ -77,8 +77,8 @@
 
     --box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.205);;
 
-    --body-bg-img: url('Images/Background.jpg');
-    --body-bg-img-dark: url('Images/background-dark.png');
+    --body-bg-img: url('Assets/Images/Background.jpg');
+    --body-bg-img-dark: url('Assets/Images/background-dark.png');
     --body-background-color: #1a1a1a93;
 
     --small-font-size: 0.9em;
@@ -148,7 +148,7 @@ html{
 }
 
 .toggle-button::before {
-    
+
     content: '';
     width: 20px;
     height: 20px;
@@ -179,6 +179,7 @@ html{
     flex-direction: column;
     display: flex;
     padding: 4rem 2rem;
+    flex: 1;
 
 }
 
@@ -231,8 +232,12 @@ a{
     transition:  0.3s ease;
 }
 ul li a {
+    list-style: none;
     color: var(--dark-first-color);
     transition:  0.3s ease;
+    list-style-type: disc; /* Use filled circles as list markers */
+    padding-left: 20px; /* Add some left padding for better spacing */
+    margin-bottom: 20px;
 }
 
 body.dark-mode {
@@ -505,6 +510,7 @@ main {
     }
    
     .logo-name {
+        cursor:default;
         text-decoration-line: none;
         font-weight: bold;
         font-size: 28px;   
@@ -640,16 +646,20 @@ main {
     justify-content: space-between;
     width: 100%;
     height: 130%;
-    padding: 50px;
+    padding: 30px;
+    
     
 }
 .about-container .about-img{
     position: relative;
-    margin-left: 50px;
+    margin-left: 100px;
+    padding: 50px;
+    border-radius: 20px;
 
 }
 
 .about-container .about-img img{
+    border-radius: 20px;
     width: 80%;
     transform: translate(0 ,0);
     box-shadow: var(--box-shadow);
@@ -657,6 +667,8 @@ main {
 }
 
 .about-container .info h1{
+    margin-bottom: 50px ;
+    margin-top: 50px ;
     font-size: 4em;
     font-weight: 600;
     line-height: 70px;
@@ -666,18 +678,22 @@ main {
 .about-container .info h3{
     color: var(--third-color);
     font-feature-settings: 1.3em;
-    font-weight: 600;
+    font-weight: 100;
+    font-size: var(--big-font-size);
 }
 .about-container .info ul{
+    list-style: none;
     color: var(--third-color);
-    font-size: var(--normal-font-size);
+    font-size: var(--big-font-size);
     max-width: 350px;
+    font-weight: 100;
 
 }
 .about-container .info li{
-    padding: 10px;
+    list-style: none;
+    font-weight: 100;
     color: var(--third-color);
-    font-size: var(--normal-font-size);
+    font-size: var(--no);
     max-width: 350px;
 
 }
@@ -691,9 +707,15 @@ main {
     justify-content: space-between;
     width: 200%;
     padding: 50px;
-    align-items: center; /* Center align the content */
+    align-items: center; 
     
 }
+.download-clicked {
+    background-color: #4CAF50; 
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
 
 .skills-list {
     list-style: none;
@@ -722,18 +744,22 @@ main {
 }
 
 .skill-bar {
+    width: 100%;
     flex: 1; 
     height: 20px;
     background-color: #f0f0f0;
     border-radius: 5px;
     overflow: hidden;
+    height: 20px;
+    margin-top: 5px;
     
 }
 
 .skill-level {
     height: 100%;
     background-color: #007bff; 
-    
+    transition: width 1s ease;
+    width: 0;
 }
 
 .skill-tier {
