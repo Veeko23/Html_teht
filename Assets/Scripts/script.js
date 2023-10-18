@@ -100,6 +100,10 @@ function DDmenuClickHandler() {
 */
 
 document.addEventListener("DOMContentLoaded", function() {
+  var fadeElements = document.querySelectorAll(".fade-in");
+  for (var i = 0; i < fadeElements.length; i++) {
+      fadeElements[i].classList.add("fade-in");
+  }
 
     const isDarkModeEnabled = JSON.parse(localStorage.getItem('darkModeEnabled'));
     if (isDarkModeEnabled) {
@@ -123,13 +127,6 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem('darkModeEnabled', this.checked);
         });
     }
-
-
-    var fadeElements = document.querySelectorAll(".fade-in");
-    for (var i = 0; i < fadeElements.length; i++) {
-        fadeElements[i].classList.add("fade-in");
-    }
-
 
         
     });
