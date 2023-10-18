@@ -1,4 +1,3 @@
-
 const data = [
   { title: "Home Page", url: "index.html" },
   { title: "About Page", url: "about.html" },
@@ -6,46 +5,66 @@ const data = [
   { title: "Contact Page", url: "contact.html" },
   { title: "CV", url: "portfolio.html" },
   { title: "github", url: "https://github.com/" },
-  
- //Items to search for......
+  // Items to search for...
 ];
-function searchOnEnter(event) {
-  if (event.key === 'Enter') {
-      search();
+
+class SearchResults {
+  constructor(data) {
+    this.data = data;
+    this.resultsList = document.getElementById("results-list");
   }
+
+  filterResults(searchQuery) {
+    const words = searchQuery.split(/\s+/);
+
+    if (words.length === 0) {
+      return [];
+    }
+
+    const matchingResults = this.data.filter((result) => {
+      const title = result.title.toLowerCase();
+      return words.some((word) => new RegExp(`\\b${word}\\b`).test(title));
+    });
+
+    return matchingResults;
+  }
+
+  renderResults(matchingResults) {
+    this.resultsList.innerHTML = "";
+
+    if (matchingResults.length === 0) {
+      this.resultsList.innerHTML = '<li>No results found.</li>';
+    } else {
+      matchingResults.forEach((result) => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = result.url;
+        a.textContent = result.title;
+        li.appendChild(a);
+        this.resultsList.appendChild(li);
+      });
+    }
+  }
+}
+
+function hideResults() {
+  const searchResultsDisplay = document.querySelector(".search-results");
+  searchResultsDisplay.style.display = "none";
 }
 
 function search() {
   const searchQuery = document.getElementById("search-box").value.toLowerCase();
-  const resultsList = document.getElementById("results-list");
-  resultsList.innerHTML = '';
+  const searchResults = new SearchResults(data);
+  const matchingResults = searchResults.filterResults(searchQuery);
+  searchResults.renderResults(matchingResults);
+  const searchResultsDisplay = document.querySelector(".search-results");
+  searchResultsDisplay.style.display = "block";
+}
 
-  const words = searchQuery.split(/\s+/);
-
-  if (words.length === 0) {
-      return; // No query, no results
+function searchOnEnter(event) {
+  if (event.key === 'Enter' || event.key === document.getElementById("Search-button")) {
+    search();
   }
-
-  const matchingResults = data.filter(result => {
-      const title = result.title.toLowerCase();
-      return words.some(word => new RegExp(`\\b${word}\\b`).test(title));
-  });
-
-  if (matchingResults.length === 0) {
-      resultsList.innerHTML = '<li>No results found.</li>';
-  } else {
-      matchingResults.forEach(result => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = result.url;
-          a.textContent = result.title;
-          li.appendChild(a);
-          resultsList.appendChild(li);
-      });
-  }
-
-  const searchResults = document.querySelector(".search-results");
-  searchResults.style.display = "block";
 }
 
 

@@ -194,6 +194,25 @@ body {
     min-height: 100vh; 
     
 }
+table {
+    width: 100%;
+    border-spacing: 0; /* Use border-spacing to control cell spacing */
+    margin-top: 20px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  td {
+    padding: 8px;
+    white-space: nowrap; /* Prevent text from wrapping within cells */
+  }
+  
+
 .search-container {
     position: relative;
     width: 300px;
@@ -202,13 +221,15 @@ body {
 
 .search-results {
     position: absolute;
-    top: 100%;
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+    top: 81px; 
     background-color: var(--body-background-color);
     border-radius: 5px;
     max-height: 200px;
     overflow-y: auto;
     display: none;
-    right: 700px;
 }
 
 #results-list {
