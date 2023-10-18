@@ -12,7 +12,7 @@ Tässä luettelen läpi arviointi kriteerien tavoitteita ja miten omasta mielest
 2. On headings ja listoja täynnä.
 3. On linkkejä kuvia käytetty sivulla.
 4. Sivulla on käytetty HTML tables About sivulla. 
-5. Omasta mielestä hyvä ymmärrys HTML rakenteesta.
+5. Omasta mielestä hyvä ymmärrys HTML rakenteesta. Käytetty tässä esim Footer, Section ja Navbar.
 
 ## CSS 5/5 
 
